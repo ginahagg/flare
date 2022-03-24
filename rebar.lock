@@ -1,4 +1,4 @@
-{"1.1.0",
+{"1.2.0",
 [{<<"crc32cer">>,{pkg,<<"crc32cer">>,<<"0.1.3">>},1},
  {<<"foil">>,
   {git,"https://github.com/lpgauth/foil.git",
@@ -9,6 +9,14 @@
   {git,"https://github.com/klarna/kafka_protocol.git",
        {ref,"e97e18adca408c02d195219d18731bad60367bfe"}},
   0},
+ {<<"luger">>,
+  {git,"https://github.com/RAttab/luger.git",
+       {ref,"8cd691ed286190b84f7071ee89fbc36bc613215d"}},
+  0},
+ {<<"meck">>,
+  {git,"https://github.com/eproxus/meck.git",
+       {ref,"6121bb7e5c21b7ba2e79754f976a55f32940b28e"}},
+  1},
  {<<"metal">>,
   {git,"https://github.com/lpgauth/metal.git",
        {ref,"43e28220b5affa45aa1e5fb0583fee26547968d3"}},
@@ -28,5 +36,10 @@
  {<<"crc32cer">>, <<"8984906C4B4FAE6AA292C48F286A1C83B19AD44BD102287ACB94D696015967CE">>},
  {<<"granderl">>, <<"F20077A68BD80B8D8783BD15A052813C6483771DEC1A5B837D307CBE92F14122">>},
  {<<"parse_trans">>, <<"9E96B1C9C3A0DF54E7B76F8F685D38BFA1EB21B31E042B1D1A5A70258E4DB1E3">>},
- {<<"snappyer">>, <<"6D739C534CD2339633127A2B40279BE71F149E5842C5363A4D88E66EFB7C1FEC">>}]}
+ {<<"snappyer">>, <<"6D739C534CD2339633127A2B40279BE71F149E5842C5363A4D88E66EFB7C1FEC">>}]},
+{pkg_hash_ext,[
+ {<<"crc32cer">>, <<"E35840BFD312192748BF177E92E85270E2BF0BBC01462DA1F7AFD4298EDAE4A7">>},
+ {<<"granderl">>, <<"0641473F29BC3211C832A6DD3ADAA04544A5DFFC1C62372556946F236DF2DAD6">>},
+ {<<"parse_trans">>, <<"5495A3309051DF7F510BC1FDABDA92DFF5417186A8F66D4419AAD6BA0AF5F0CB">>},
+ {<<"snappyer">>, <<"76ABB8ED503722E10EE0F587956662881AF9009067EFDEC87798A03DB3527184">>}]}
 ].

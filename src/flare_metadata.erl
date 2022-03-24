@@ -56,6 +56,6 @@ topic([{Ip, Port} | T], Topic) ->
         {ok, <<0:32, Bin/binary>>} ->
             flare_kpro:decode_metadata(Bin);
         {error, Reason} ->
-            error_logger:info_msg("~p:~p metadata returned error for topic:~p, with error:~p~n", [Ip, Port, Topic, Reason]),
+            luger:info("flare_metadata","~p:~p metadata returned error for topic:~p, with error:~p", [Ip, Port, Topic, Reason]),
             topic(T, Topic)
     end.
