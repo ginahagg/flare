@@ -55,6 +55,7 @@ topic([{Ip, Port} | T], Topic) ->
     case flare_utils:send_recv(Ip, Port, Data) of
         {ok, <<0:32, Bin/binary>>} ->
             flare_kpro:decode_metadata(Bin);
-        {error, _Reason} ->
+        {error, Reason} ->
+            error_logger:info_msg("~p:~p metadata returned error for topic:~p, with error:~p~n", [Ip, Port, Topic, Reason]),
             topic(T, Topic)
     end.
