@@ -3,6 +3,7 @@
   {vsn, "0.3.5"},
   {registered, []},
   {applications, [
+    luger,
     foil,
     kafka_protocol,
     kernel,
