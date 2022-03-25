@@ -32,7 +32,7 @@ start(Name, #{
         ?DEFAULT_BROKER_RECONNECT_MAX),
     ReconnectTimeMin = ?GET_ENV(broker_reconnect_time_min,
         ?DEFAULT_BROKER_RECONNECT_MIN),
-
+    luger:info("shackle_pool","starting ip: ~p, port: ~p, Name: ~p, Client: ~p",[Ip, Port, Name, ?CLIENT]),
     shackle_pool:start(Name, ?CLIENT, [
         {ip, Ip},
         {port, Port},
