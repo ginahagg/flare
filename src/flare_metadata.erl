@@ -54,7 +54,9 @@ topic([{Ip, Port} | T], Topic) ->
     Data = flare_kpro:encode_request(0, Req),
     case flare_utils:send_recv(Ip, Port, Data) of
         {ok, <<0:32, Bin/binary>>} ->
-            flare_kpro:decode_metadata(Bin);
+            Decoded = flare_kpro:decode_metadata(Bin),
+            luger:info("flare_metadata","~p:~p metadata returned ok for topic:~p :~p", [Ip, Port, Topic, Decoded]),
+            Decoded;
         {error, Reason} ->
             luger:info("flare_metadata","~p:~p metadata returned error for topic:~p, with error:~p", [Ip, Port, Topic, Reason]),
             topic(T, Topic)
